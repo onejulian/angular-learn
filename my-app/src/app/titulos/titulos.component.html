@@ -1,0 +1,38 @@
+<h1>Soy un h1</h1>
+<h2>Soy un h2</h2>
+<h3>Soy un h3</h3>
+<p>Hola {{nombre}} {{apellido}} </p>
+<p>yo soy {{alumno.nombre}} {{alumno.apellido}} </p>
+<!-- <img [src]="imagen" alt=""> -->
+<!-- <input type="text" [value]="inputNuevo"> -->
+<br>
+<br>
+<input type="text" [(ngModel)]="inputNuevo">
+<p> {{inputNuevo}} </p>
+
+
+<label for="">Correo
+    <input type="text" (ngModelChange)="escribirCorreo()" [(ngModel)]="correo">
+</label>
+<!-- <label for="">Contraseña
+    <input type="password" (ngModelChange)="escribirModelo()" (keydown)="ingresar($event)" [(ngModel)]="contrasenia">
+</label> -->
+<label for="">Contraseña
+    <input type="password" (keydown)="ingresar($event)" [(ngModel)]="contrasenia">
+</label>
+<!-- <label for="">Contraseña
+    <input type="password" (keyup)="ingresar($event)" [(ngModel)]="contrasenia">
+</label> -->
+
+<!-- <button (click)="ingresar()">Iniciar</button> -->
+<!-- <button (dblclick)="ingresar()">Iniciar</button> -->
+<button (dblclick)="llamarAlert()">Doble click</button>
+<br>
+<br>
+<!-- <input type="text" (input)="escribir($event)" >
+<br>
+<br>
+
+<input type="text" (focus)="colorearFondo($event)" > -->
+
+<img [src]="imagen" (mouseenter)="cambiarTamanio($event)" (mouseleave)="incrementarTamanio($event)" alt="">
