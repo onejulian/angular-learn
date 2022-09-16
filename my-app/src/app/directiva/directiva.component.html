@@ -1,0 +1,16 @@
+<!-- <div *ngIf="!cargando">
+    <p>Hola terminó de cargar</p>
+</div>
+<img *ngIf="cargando" src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif" style="width: 200px;" alt="">
+
+<button (click)="alternar()" >Alternar</button> -->
+
+<div *ngFor="let nombre of nombres">
+    <p>Hola mi nombre: {{nombre}} </p>
+</div>
+<div *ngFor="let producto of productos">
+    <p>El producto es {{producto.nombre}} </p>
+    <p>Su stock es {{producto.stock}} </p>
+    <p>Su fabricante es {{producto.fabricante}} </p>
+    <p>Vence en {{producto.fechaVence}} </p>
+</div>
