@@ -5,7 +5,7 @@
 
 <button (click)="alternar()" >Alternar</button> -->
 
-<div *ngFor="let nombre of nombres">
+<!-- <div *ngFor="let nombre of nombres">
     <p>Hola mi nombre: {{nombre}} </p>
 </div>
 <div *ngFor="let producto of productos">
@@ -13,4 +13,30 @@
     <p>Su stock es {{producto.stock}} </p>
     <p>Su fabricante es {{producto.fabricante}} </p>
     <p>Vence en {{producto.fechaVence}} </p>
+</div> -->
+
+<!-- <div class="tab" [ngSwitch]="pestana">
+    <button (click)="cambiarPestana('perfil')">Perfil</button>
+    <button (click)="cambiarPestana('puntos')">Puntos</button>
+    <button (click)="cambiarPestana('info')">Info</button>
+
+    <div class="tabContenido">
+        <p *ngSwitchCase="'perfil'">Este es el perfil</p>
+        <p *ngSwitchCase="'puntos'">Estos son los puntos</p>
+        <p *ngSwitchCase="'info'">Esta es la info</p>
+        <p *ngSwitchDefault>Seleccione una pestaña</p>
+    </div>
+</div> -->
+
+<button (click)="alternarFondo()">Alternar</button>
+
+<div [ngClass]=" { 'cuadrado' : mostrarCuadrado } ">
+    <p>Este debería aparecer con un fondo verde</p>
+</div>
+
+<div *ngFor="let producto of productos" class="producto">
+    <p [ngClass]=" { 'textoImportante' : producto.esImportante, 'textoGrande' : producto.textoGrande } ">El producto es {{producto.nombre}} </p>
+    <p>Su stock es {{producto.stock}} </p>
+    <p>Su fabricante es {{producto.fabricante}} </p>
+    <p [class.textoImportante]="producto.esImportante">Vence en {{producto.fechaVence}} </p>
 </div>
