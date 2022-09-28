@@ -9,6 +9,8 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ContinuaraPipe } from './continuara.pipe';
+import { Pagina404Component } from './pagina404/pagina404.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ContinuaraPipe } from './continuara.pipe';
     EjemploComponent,
     PipesComponent,
     ContinuaraPipe,
+    Pagina404Component,
+    EncabezadoComponent,
   ],
   imports: [
     BrowserModule,
